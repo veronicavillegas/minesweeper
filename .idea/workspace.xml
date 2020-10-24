@@ -1,22 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="241759ae-6628-4176-aca0-21d22567497e" name="Default Changelist" comment="" />
+    <list default="true" id="241759ae-6628-4176-aca0-21d22567497e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_log4j12_2_0_0_alpha0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/minesweeper-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1jK7Ulb1TjMBy5xBFEZ8b4ke4Bk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4049505" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="NOT_SET" />
+            <option name="failureBehavior" value="NOT_SET" />
+            <option name="localRepository" value="" />
+            <option name="mavenHome" value="Bundled (Maven 3)" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="INFO" />
+            <option name="pluginUpdatePolicy" value="DEFAULT" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="threads" />
+            <option name="updateIndicesOnProjectOpen" value="true" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="userSettingsFile" value="" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="exec:java" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="compile" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -28,11 +121,61 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603540947932</updated>
-      <workItem from="1603540952806" duration="692000" />
+      <workItem from="1603540952806" duration="13375000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="338" y="127" width="1008" height="669" key="#Project_Structure" timestamp="1603559474913">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="338" y="127" width="1008" height="669" key="#Project_Structure/36.23.1404.877@36.23.1404.877" timestamp="1603559474913" />
+    <state x="202" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603569055854">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="202" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.23.1404.877@36.23.1404.877" timestamp="1603569055854" />
+    <state x="325" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1603568659280">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="325" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/36.23.1404.877@36.23.1404.877" timestamp="1603568659280" />
+    <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603575364563">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.23.1404.877@36.23.1404.877" timestamp="1603575364563" />
+    <state width="1362" height="275" key="GridCell.Tab.0.bottom" timestamp="1603575871762">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="275" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603575871762" />
+    <state width="1362" height="275" key="GridCell.Tab.0.center" timestamp="1603575871761">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="275" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1603575871761" />
+    <state width="1362" height="275" key="GridCell.Tab.0.left" timestamp="1603575871761">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="275" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1603575871761" />
+    <state width="1362" height="275" key="GridCell.Tab.0.right" timestamp="1603575871762">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="275" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1603575871762" />
+    <state x="61" y="43" width="1189" height="837" key="SettingsEditor" timestamp="1603569070244">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="61" y="43" width="1189" height="837" key="SettingsEditor/36.23.1404.877@36.23.1404.877" timestamp="1603569070244" />
+    <state x="359" y="362" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603565773758">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="359" y="362" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/36.23.1404.877@36.23.1404.877" timestamp="1603565773758" />
+    <state x="396" y="218" width="683" height="486" key="find.popup" timestamp="1603575759900">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="396" y="218" width="683" height="486" key="find.popup/36.23.1404.877@36.23.1404.877" timestamp="1603575759900" />
+    <state x="115" y="159" key="new project wizard" timestamp="1603568123471">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="115" y="159" key="new project wizard/36.23.1404.877@36.23.1404.877" timestamp="1603568123471" />
   </component>
 </project>
