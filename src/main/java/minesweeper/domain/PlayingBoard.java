@@ -1,5 +1,6 @@
 package minesweeper.domain;
 
 public class PlayingBoard {
-    public String[][] elements;
+    public String[][] display;
+    public int[][] board;
 }

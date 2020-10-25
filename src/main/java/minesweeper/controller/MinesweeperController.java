@@ -11,8 +11,9 @@ public enum MinesweeperController {
     PlayingBoardService playingBoardService = PlayingBoardService.INSTANCE;
 
     public String getPlayingBoard(final Request request, final Response response) {
-        int columns = 3;
-        int rows = 3;
+        //TODO: Get from request.
+        int columns = 4;
+        int rows = 4;
         int mines = 4;
 
         PlayingBoard playingBoard = playingBoardService.getPlayingBoard(rows, columns, mines);

@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="241759ae-6628-4176-aca0-21d22567497e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_log4j12_2_0_0_alpha0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/minesweeper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorMinesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +55,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4049505" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="Run" type="MavenRunConfiguration" factoryName="Maven">
@@ -121,7 +113,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603540947932</updated>
-      <workItem from="1603540952806" duration="13375000" />
+      <workItem from="1603540952806" duration="15024000" />
+      <workItem from="1603577800926" duration="6695000" />
     </task>
     <servers />
   </component>
@@ -145,30 +138,62 @@
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.23.1404.877@36.23.1404.877" timestamp="1603575364563" />
-    <state width="1362" height="275" key="GridCell.Tab.0.bottom" timestamp="1603575871762">
+    <state x="501" y="172" key="#xdebugger.evaluate" timestamp="1603588662495">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603575871762" />
-    <state width="1362" height="275" key="GridCell.Tab.0.center" timestamp="1603575871761">
+    <state x="501" y="172" key="#xdebugger.evaluate/36.23.1404.877@36.23.1404.877" timestamp="1603588662495" />
+    <state width="500" height="466" key="DebuggerActiveHint" timestamp="1603588646250">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1603575871761" />
-    <state width="1362" height="275" key="GridCell.Tab.0.left" timestamp="1603575871761">
+    <state width="500" height="466" key="DebuggerActiveHint/36.23.1404.877@36.23.1404.877" timestamp="1603588646250" />
+    <state width="1362" height="275" key="GridCell.Tab.0.bottom" timestamp="1603625022454">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1603575871761" />
-    <state width="1362" height="275" key="GridCell.Tab.0.right" timestamp="1603575871762">
+    <state width="1362" height="275" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603625022454" />
+    <state width="1362" height="275" key="GridCell.Tab.0.center" timestamp="1603625022453">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1603575871762" />
-    <state x="61" y="43" width="1189" height="837" key="SettingsEditor" timestamp="1603569070244">
+    <state width="1362" height="275" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1603625022453" />
+    <state width="1362" height="275" key="GridCell.Tab.0.left" timestamp="1603625022453">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state x="61" y="43" width="1189" height="837" key="SettingsEditor/36.23.1404.877@36.23.1404.877" timestamp="1603569070244" />
+    <state width="1362" height="275" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1603625022453" />
+    <state width="1362" height="275" key="GridCell.Tab.0.right" timestamp="1603625022454">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="275" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1603625022454" />
+    <state width="1362" height="285" key="GridCell.Tab.1.bottom" timestamp="1603589288166">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="285" key="GridCell.Tab.1.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603589288166" />
+    <state width="1362" height="285" key="GridCell.Tab.1.center" timestamp="1603589288165">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="285" key="GridCell.Tab.1.center/36.23.1404.877@36.23.1404.877" timestamp="1603589288165" />
+    <state width="1362" height="285" key="GridCell.Tab.1.left" timestamp="1603589288165">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="285" key="GridCell.Tab.1.left/36.23.1404.877@36.23.1404.877" timestamp="1603589288165" />
+    <state width="1362" height="285" key="GridCell.Tab.1.right" timestamp="1603589288165">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="1362" height="285" key="GridCell.Tab.1.right/36.23.1404.877@36.23.1404.877" timestamp="1603589288165" />
+    <state x="61" y="43" width="1189" height="837" key="SettingsEditor" timestamp="1603586832131">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="61" y="43" width="1189" height="837" key="SettingsEditor/36.23.1404.877@36.23.1404.877" timestamp="1603586832131" />
+    <state x="415" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1603577840641">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="415" y="294" key="com.intellij.ide.util.TipDialog/36.23.1404.877@36.23.1404.877" timestamp="1603577840641" />
     <state x="359" y="362" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603565773758">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="359" y="362" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/36.23.1404.877@36.23.1404.877" timestamp="1603565773758" />
+    <state x="476" y="221" key="extract.method.dialog" timestamp="1603579062682">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="476" y="221" key="extract.method.dialog/36.23.1404.877@36.23.1404.877" timestamp="1603579062682" />
     <state x="396" y="218" width="683" height="486" key="find.popup" timestamp="1603575759900">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
@@ -177,5 +202,16 @@
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="115" y="159" key="new project wizard/36.23.1404.877@36.23.1404.877" timestamp="1603568123471" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
