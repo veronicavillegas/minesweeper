@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="241759ae-6628-4176-aca0-21d22567497e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorMinesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/InititalizationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/response/Error.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/response/PlayingBoardResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorMinesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorMinesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/service/CalculatorMinesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/service/CalculatorMinesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/service/PlayingBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/service/PlayingBoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -114,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603540947932</updated>
       <workItem from="1603540952806" duration="15024000" />
-      <workItem from="1603577800926" duration="6695000" />
+      <workItem from="1603577800926" duration="13217000" />
     </task>
     <servers />
   </component>
@@ -130,54 +138,54 @@
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="202" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/36.23.1404.877@36.23.1404.877" timestamp="1603569055854" />
-    <state x="325" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1603568659280">
+    <state x="325" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1603626508317">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state x="325" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/36.23.1404.877@36.23.1404.877" timestamp="1603568659280" />
-    <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603575364563">
+    <state x="325" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/36.23.1404.877@36.23.1404.877" timestamp="1603626508317" />
+    <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603631720212">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.23.1404.877@36.23.1404.877" timestamp="1603575364563" />
-    <state x="501" y="172" key="#xdebugger.evaluate" timestamp="1603588662495">
+    <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.23.1404.877@36.23.1404.877" timestamp="1603631720212" />
+    <state x="438" y="321" width="663" height="579" key="#xdebugger.evaluate" timestamp="1603630917395">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state x="501" y="172" key="#xdebugger.evaluate/36.23.1404.877@36.23.1404.877" timestamp="1603588662495" />
-    <state width="500" height="466" key="DebuggerActiveHint" timestamp="1603588646250">
+    <state x="438" y="321" width="663" height="579" key="#xdebugger.evaluate/36.23.1404.877@36.23.1404.877" timestamp="1603630917395" />
+    <state width="500" height="466" key="DebuggerActiveHint" timestamp="1603631155743">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="500" height="466" key="DebuggerActiveHint/36.23.1404.877@36.23.1404.877" timestamp="1603588646250" />
-    <state width="1362" height="275" key="GridCell.Tab.0.bottom" timestamp="1603625022454">
+    <state width="500" height="466" key="DebuggerActiveHint/36.23.1404.877@36.23.1404.877" timestamp="1603631155743" />
+    <state width="1362" height="275" key="GridCell.Tab.0.bottom" timestamp="1603632444319">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603625022454" />
-    <state width="1362" height="275" key="GridCell.Tab.0.center" timestamp="1603625022453">
+    <state width="1362" height="275" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603632444319" />
+    <state width="1362" height="275" key="GridCell.Tab.0.center" timestamp="1603632444318">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1603625022453" />
-    <state width="1362" height="275" key="GridCell.Tab.0.left" timestamp="1603625022453">
+    <state width="1362" height="275" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1603632444318" />
+    <state width="1362" height="275" key="GridCell.Tab.0.left" timestamp="1603632444318">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1603625022453" />
-    <state width="1362" height="275" key="GridCell.Tab.0.right" timestamp="1603625022454">
+    <state width="1362" height="275" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1603632444318" />
+    <state width="1362" height="275" key="GridCell.Tab.0.right" timestamp="1603632444319">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="275" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1603625022454" />
-    <state width="1362" height="285" key="GridCell.Tab.1.bottom" timestamp="1603589288166">
+    <state width="1362" height="275" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1603632444319" />
+    <state width="1362" height="285" key="GridCell.Tab.1.bottom" timestamp="1603631332770">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="285" key="GridCell.Tab.1.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603589288166" />
-    <state width="1362" height="285" key="GridCell.Tab.1.center" timestamp="1603589288165">
+    <state width="1362" height="285" key="GridCell.Tab.1.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603631332770" />
+    <state width="1362" height="285" key="GridCell.Tab.1.center" timestamp="1603631332770">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="285" key="GridCell.Tab.1.center/36.23.1404.877@36.23.1404.877" timestamp="1603589288165" />
-    <state width="1362" height="285" key="GridCell.Tab.1.left" timestamp="1603589288165">
+    <state width="1362" height="285" key="GridCell.Tab.1.center/36.23.1404.877@36.23.1404.877" timestamp="1603631332770" />
+    <state width="1362" height="285" key="GridCell.Tab.1.left" timestamp="1603631332769">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="285" key="GridCell.Tab.1.left/36.23.1404.877@36.23.1404.877" timestamp="1603589288165" />
-    <state width="1362" height="285" key="GridCell.Tab.1.right" timestamp="1603589288165">
+    <state width="1362" height="285" key="GridCell.Tab.1.left/36.23.1404.877@36.23.1404.877" timestamp="1603631332769" />
+    <state width="1362" height="285" key="GridCell.Tab.1.right" timestamp="1603631332770">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="285" key="GridCell.Tab.1.right/36.23.1404.877@36.23.1404.877" timestamp="1603589288165" />
+    <state width="1362" height="285" key="GridCell.Tab.1.right/36.23.1404.877@36.23.1404.877" timestamp="1603631332770" />
     <state x="61" y="43" width="1189" height="837" key="SettingsEditor" timestamp="1603586832131">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
@@ -202,14 +210,23 @@
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="115" y="159" key="new project wizard/36.23.1404.877@36.23.1404.877" timestamp="1603568123471" />
+    <state x="444" y="75" key="refactoring.ChangeSignatureDialog" timestamp="1603627681949">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="444" y="75" key="refactoring.ChangeSignatureDialog/36.23.1404.877@36.23.1404.877" timestamp="1603627681949" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java</url>
-          <line>37</line>
+          <line>51</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

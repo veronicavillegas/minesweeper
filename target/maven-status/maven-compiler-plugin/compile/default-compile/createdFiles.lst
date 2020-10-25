@@ -1,4 +1,8 @@
+minesweeper/domain/PlayData.class
+minesweeper/response/Error.class
 minesweeper/service/PlayingBoardService.class
+minesweeper/domain/InititalizationData.class
+minesweeper/response/PlayingBoardResponse.class
 minesweeper/Main.class
 minesweeper/domain/PlayingBoard.class
 minesweeper/controller/MinesweeperController.class

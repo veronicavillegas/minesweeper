@@ -1,5 +1,10 @@
 package minesweeper;
+import com.google.gson.Gson;
 import minesweeper.controller.MinesweeperController;
+import org.slf4j.MDC;
+import spark.Spark;
+
+import java.awt.*;
 
 import static spark.Spark.*;
 
@@ -11,7 +16,14 @@ public class Main {
 
         get("/ping", (req, res) -> "pong");
 
-        get("/get_playing_board", minesweeperController::getPlayingBoard);
+        Gson gson = new Gson();
 
+        post("/create_playing_board", minesweeperController::createPlayBoard, gson::toJson);
+
+        post("/play", minesweeperController::discoverCell, gson::toJson);
+
+        after((request, response) -> {
+            response.header("Content-Type", "application/json");
+        });
     }
 }

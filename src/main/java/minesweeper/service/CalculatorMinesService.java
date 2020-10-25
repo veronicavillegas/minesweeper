@@ -5,6 +5,9 @@ import java.util.Random;
 public enum CalculatorMinesService {
     INSTANCE;
 
+    /*
+    * Set mines into playboard
+    **/
     public int[][] setMines(int[][] board, int mines) {
         int[][] boardWithMines = board;
 
@@ -17,6 +20,8 @@ public enum CalculatorMinesService {
         return boardWithMines;
     }
 
+    /*
+    * Calculate random position to set mine. Also it will calculate the new value of adyacent positions to new the mine.*/
     private void addMine(int rows, int columns, int[][] boardWithMines) {
         int randomRow;
         int randomColumn;

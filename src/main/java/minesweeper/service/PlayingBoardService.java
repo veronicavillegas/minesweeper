@@ -1,12 +1,21 @@
 package minesweeper.service;
 
+import minesweeper.domain.PlayData;
+import minesweeper.domain.InititalizationData;
 import minesweeper.domain.PlayingBoard;
 
 public enum PlayingBoardService {
     INSTANCE;
     CalculatorMinesService calculatorMinesService = CalculatorMinesService.INSTANCE;
 
-    public PlayingBoard getPlayingBoard(int rows, int columns, int mines) {
+    /*
+    * Initilize the play board.
+    * */
+    public PlayingBoard createPlayBoard(InititalizationData inititalizationData) {
+        int rows = inititalizationData.rows;
+        int columns = inititalizationData.columns;
+        int mines = inititalizationData.mines;
+
         PlayingBoard playingBoard = new PlayingBoard();
         playingBoard.display = initBoardToShow(rows, columns);
         playingBoard.board = initPlayingBoard(rows, columns);
@@ -34,6 +43,12 @@ public enum PlayingBoardService {
             }
         }
         return board;
+    }
+
+    public PlayingBoard discoverCell(PlayData playData) {
+        PlayingBoard playingBoard = playData.playingBoard;
+
+        return playingBoard;
     }
 }
 
