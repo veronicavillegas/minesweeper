@@ -1,6 +1,6 @@
 package minesweeper.response;
 
-public class Error {
-    public String status;
+public class StatusResponse {
+    public int status;
     public String message;
 }

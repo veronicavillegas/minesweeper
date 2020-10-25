@@ -3,7 +3,7 @@ package minesweeper.controller;
 import com.google.gson.Gson;
 import minesweeper.domain.PlayData;
 import minesweeper.domain.InititalizationData;
-import minesweeper.response.Error;
+import minesweeper.response.StatusResponse;
 import minesweeper.response.PlayingBoardResponse;
 import minesweeper.service.PlayingBoardService;
 import spark.Request;
@@ -19,10 +19,10 @@ public enum MinesweeperController {
         try{
             InititalizationData inititalizationData = new Gson().fromJson(request.body(), InititalizationData.class);
             playingBoardResponse.playingBoard = playingBoardService.createPlayBoard(inititalizationData);
-            playingBoardResponse.status = "success";
+            playingBoardResponse.statusResponse = getStatusResponse(201, "OK");
         } catch (Exception ex) {
             //TODO: Create interface Response to inherit.
-            setErrorResponse(playingBoardResponse, ex);
+            playingBoardResponse.statusResponse = getStatusResponse(500, ex.getMessage());
         }
 
         return playingBoardResponse;
@@ -33,19 +33,19 @@ public enum MinesweeperController {
 
         try{
             PlayData playData = new Gson().fromJson(request.body(), PlayData.class);
-            playingBoardResponse.playingBoard = playingBoardService.discoverCell(playData);
-            playingBoardResponse.status = "success";
+            playingBoardResponse.playingBoard = playingBoardService.discoverCell(playData.playingBoard, playData.selectedCell);
+            playingBoardResponse.statusResponse = getStatusResponse(201, "OK");
         } catch (Exception ex) {
-            //TODO: Create interface Response to inherit.
-            setErrorResponse(playingBoardResponse, ex);
+            playingBoardResponse.statusResponse = getStatusResponse(500, ex.getMessage());
         }
 
         return playingBoardResponse;
     }
 
-    private void setErrorResponse(PlayingBoardResponse playingBoardResponse, Exception ex) {
-        playingBoardResponse.error = new Error();
-        playingBoardResponse.error.status = "error";
-        playingBoardResponse.error.message = ex.getMessage();
+    private StatusResponse getStatusResponse(int status, String message) {
+        StatusResponse statusResponse = new StatusResponse();
+        statusResponse.status = status;
+        statusResponse.message = message;
+        return statusResponse;
     }
 }
