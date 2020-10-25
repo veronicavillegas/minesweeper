@@ -1,9 +1,10 @@
-minesweeper/utils/CellStatus.class
-minesweeper/domain/Cell.class
+minesweeper/domain/Square.class
 minesweeper/domain/PlayData.class
 minesweeper/service/PlayingBoardService.class
 minesweeper/utils/PlayStatus.class
 minesweeper/domain/InititalizationData.class
+minesweeper/utils/CellStatus.class
+minesweeper/domain/Cell.class
 minesweeper/response/PlayingBoardResponse.class
 minesweeper/response/StatusResponse.class
 minesweeper/Main.class

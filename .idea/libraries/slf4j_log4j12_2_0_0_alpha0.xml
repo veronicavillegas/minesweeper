@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/Downloads/slf4j-log4j12-2.0.0-alpha0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/spymemcached-2.10.3-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

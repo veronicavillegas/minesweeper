@@ -22,6 +22,10 @@ public class Main {
 
         post("/play", minesweeperController::discoverCell, gson::toJson);
 
+        post("/save_game", minesweeperController::saveGame, gson::toJson);
+
+        post("/resume_game", minesweeperController::resumeGame, gson::toJson);
+
         after((request, response) -> {
             response.header("Content-Type", "application/json");
         });

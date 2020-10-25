@@ -1,11 +1,13 @@
+/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/service/PlayingBoardService.java
+/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/response/StatusResponse.java
+/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/domain/InititalizationData.java
+/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/domain/PlayData.java
 /Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/response/PlayingBoardResponse.java
 /Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/domain/PlayingBoard.java
-/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/service/PlayingBoardService.java
-/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/request/InititalizationData.java
-/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/request/PlayData.java
 /Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/controller/MinesweeperController.java
 /Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/utils/PlayStatus.java
-/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/response/StatusResponse.java
+/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/domain/Square.java
+/Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/utils/CellStatus.java
 /Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/Main.java
 /Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/domain/Cell.java
 /Users/contingencia/Documents/GitHub/minesweeper/src/main/java/minesweeper/service/CalculatorMinesService.java

@@ -1,5 +1,7 @@
 package minesweeper.service;
 
+import minesweeper.domain.Square;
+
 import java.util.Random;
 
 public enum CalculatorMinesService {
@@ -8,8 +10,8 @@ public enum CalculatorMinesService {
     /*
     * Set mines into playboard
     **/
-    public int[][] setMines(int[][] board, int mines) {
-        int[][] boardWithMines = board;
+    public Square[][] setMines(Square[][] board, int mines) {
+        Square[][] boardWithMines = board;
 
         int countOfMines = mines;
 
@@ -22,21 +24,21 @@ public enum CalculatorMinesService {
 
     /*
     * Calculate random position to set mine. Also it will calculate the new value of adyacent positions to new the mine.*/
-    private void addMine(int rows, int columns, int[][] boardWithMines) {
+    private void addMine(int rows, int columns, Square[][] boardWithMines) {
         int randomRow;
         int randomColumn;
 
         do{
             randomRow = new Random().nextInt(rows);
             randomColumn = new Random().nextInt(columns);
-        } while (boardWithMines[randomRow][randomColumn] == 9 );
+        } while (boardWithMines[randomRow][randomColumn].value == 9 );
 
-        boardWithMines[randomRow][randomColumn] = 9;
+        boardWithMines[randomRow][randomColumn].value = 9;
 
         calculateAdyacents(boardWithMines, randomRow, randomColumn);
     }
 
-    private void calculateAdyacents(int[][] boardWithMines, int mineRow, int mineColumn) {
+    private void calculateAdyacents(Square[][] boardWithMines, int mineRow, int mineColumn) {
         for(int row = mineRow -1; row < mineRow + 2; row++) {
             if(isIndexOutOfLimit(boardWithMines.length, row)) {
                 continue;
@@ -46,10 +48,10 @@ public enum CalculatorMinesService {
                     continue;
                 }
 
-                int adyacentCell = boardWithMines[row][col];
+                int adyacentCell = boardWithMines[row][col].value;
 
                 if(!hasMine(adyacentCell)){
-                    boardWithMines[row][col] = ++adyacentCell;
+                    boardWithMines[row][col].value = ++adyacentCell;
                 }
             }
         }

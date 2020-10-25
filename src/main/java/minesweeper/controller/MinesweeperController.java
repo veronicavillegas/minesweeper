@@ -42,6 +42,14 @@ public enum MinesweeperController {
         return playingBoardResponse;
     }
 
+    public StatusResponse saveGame(final Request request, final Response response) {
+        return new StatusResponse();
+    }
+
+    public PlayingBoardResponse resumeGame(final Request request, final Response response) {
+        return new PlayingBoardResponse();
+    }
+
     private StatusResponse getStatusResponse(int status, String message) {
         StatusResponse statusResponse = new StatusResponse();
         statusResponse.status = status;
