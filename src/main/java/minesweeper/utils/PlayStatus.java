@@ -1,6 +1,8 @@
 package minesweeper.utils;
 
-public enum PlayStatus {
+import java.io.Serializable;
+
+public enum PlayStatus implements Serializable {
     INIT,
     GAME_OVER,
     CONTINUE,

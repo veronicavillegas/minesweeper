@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="241759ae-6628-4176-aca0-21d22567497e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/slf4j_log4j12_2_0_0_alpha0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_log4j12_2_0_0_alpha0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/GameSaverService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/PersistenceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/PlayingBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/domain/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/domain/Square.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorMinesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorMinesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/utils/PlayStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/utils/PlayStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/domain/PlayingBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/domain/PlayingBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/service/CalculatorMinesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/service/CalculatorMinesService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/service/PlayingBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/service/PlayingBoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/utils/PlayStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/utils/PlayStatus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -22,12 +25,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="minesweeper" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -44,13 +50,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1jK7Ulb1TjMBy5xBFEZ8b4ke4Bk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -122,12 +131,15 @@
       <option name="presentableId" value="Default" />
       <updated>1603540947932</updated>
       <workItem from="1603540952806" duration="15024000" />
-      <workItem from="1603577800926" duration="25225000" />
+      <workItem from="1603577800926" duration="35675000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="338" y="127" width="1008" height="669" key="#Project_Structure" timestamp="1603559474913">
@@ -150,50 +162,58 @@
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="434" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/36.23.1404.877@36.23.1404.877" timestamp="1603631720212" />
-    <state x="438" y="321" width="663" height="579" key="#xdebugger.evaluate" timestamp="1603663970448">
+    <state x="438" y="321" width="663" height="579" key="#xdebugger.evaluate" timestamp="1603674640271">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state x="438" y="321" width="663" height="579" key="#xdebugger.evaluate/36.23.1404.877@36.23.1404.877" timestamp="1603663970448" />
-    <state width="500" height="466" key="DebuggerActiveHint" timestamp="1603663852957">
+    <state x="438" y="321" width="663" height="579" key="#xdebugger.evaluate/36.23.1404.877@36.23.1404.877" timestamp="1603674640271" />
+    <state width="720" height="466" key="DebuggerActiveHint" timestamp="1603712505276">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="500" height="466" key="DebuggerActiveHint/36.23.1404.877@36.23.1404.877" timestamp="1603663852957" />
-    <state width="1362" height="161" key="GridCell.Tab.0.bottom" timestamp="1603665540667">
+    <state width="720" height="466" key="DebuggerActiveHint/36.23.1404.877@36.23.1404.877" timestamp="1603712505276" />
+    <state width="1362" height="274" key="GridCell.Tab.0.bottom" timestamp="1603715650740">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603665540667" />
-    <state width="1362" height="161" key="GridCell.Tab.0.center" timestamp="1603665540666">
+    <state width="1362" height="274" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603715650740" />
+    <state width="1362" height="274" key="GridCell.Tab.0.center" timestamp="1603715650735">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1603665540666" />
-    <state width="1362" height="161" key="GridCell.Tab.0.left" timestamp="1603665540666">
+    <state width="1362" height="274" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1603715650735" />
+    <state width="1362" height="274" key="GridCell.Tab.0.left" timestamp="1603715650734">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1603665540666" />
-    <state width="1362" height="161" key="GridCell.Tab.0.right" timestamp="1603665540667">
+    <state width="1362" height="274" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1603715650734" />
+    <state width="1362" height="274" key="GridCell.Tab.0.right" timestamp="1603715650738">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1603665540667" />
-    <state width="1362" height="161" key="GridCell.Tab.1.bottom" timestamp="1603665540668">
+    <state width="1362" height="274" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1603715650738" />
+    <state width="1362" height="274" key="GridCell.Tab.1.bottom" timestamp="1603715650741">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.1.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603665540668" />
-    <state width="1362" height="161" key="GridCell.Tab.1.center" timestamp="1603665540668">
+    <state width="1362" height="274" key="GridCell.Tab.1.bottom/36.23.1404.877@36.23.1404.877" timestamp="1603715650741" />
+    <state width="1362" height="274" key="GridCell.Tab.1.center" timestamp="1603715650740">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.1.center/36.23.1404.877@36.23.1404.877" timestamp="1603665540668" />
-    <state width="1362" height="161" key="GridCell.Tab.1.left" timestamp="1603665540668">
+    <state width="1362" height="274" key="GridCell.Tab.1.center/36.23.1404.877@36.23.1404.877" timestamp="1603715650740" />
+    <state width="1362" height="274" key="GridCell.Tab.1.left" timestamp="1603715650740">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.1.left/36.23.1404.877@36.23.1404.877" timestamp="1603665540668" />
-    <state width="1362" height="161" key="GridCell.Tab.1.right" timestamp="1603665540668">
+    <state width="1362" height="274" key="GridCell.Tab.1.left/36.23.1404.877@36.23.1404.877" timestamp="1603715650740" />
+    <state width="1362" height="274" key="GridCell.Tab.1.right" timestamp="1603715650741">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state width="1362" height="161" key="GridCell.Tab.1.right/36.23.1404.877@36.23.1404.877" timestamp="1603665540668" />
-    <state x="61" y="43" width="1189" height="837" key="SettingsEditor" timestamp="1603668423433">
+    <state width="1362" height="274" key="GridCell.Tab.1.right/36.23.1404.877@36.23.1404.877" timestamp="1603715650741" />
+    <state x="276" y="123" key="Maven.ArtifactSearchDialog" timestamp="1603669057716">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state x="61" y="43" width="1189" height="837" key="SettingsEditor/36.23.1404.877@36.23.1404.877" timestamp="1603668423433" />
+    <state x="276" y="123" key="Maven.ArtifactSearchDialog/36.23.1404.877@36.23.1404.877" timestamp="1603669057716" />
+    <state x="61" y="43" width="1189" height="837" key="SettingsEditor" timestamp="1603669926257">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="61" y="43" width="1189" height="837" key="SettingsEditor/36.23.1404.877@36.23.1404.877" timestamp="1603669926257" />
+    <state width="702" height="438" key="XDebugger.FullValuePopup" timestamp="1603673087194">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state width="702" height="438" key="XDebugger.FullValuePopup/36.23.1404.877@36.23.1404.877" timestamp="1603673087194" />
     <state x="415" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1603577840641">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
@@ -206,10 +226,10 @@
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="285" y="204" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/36.23.1404.877@36.23.1404.877" timestamp="1603664143584" />
-    <state x="476" y="221" key="extract.method.dialog" timestamp="1603643619139">
+    <state x="476" y="221" key="extract.method.dialog" timestamp="1603714070560">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
-    <state x="476" y="221" key="extract.method.dialog/36.23.1404.877@36.23.1404.877" timestamp="1603643619139" />
+    <state x="476" y="221" key="extract.method.dialog/36.23.1404.877@36.23.1404.877" timestamp="1603714070560" />
     <state x="398" y="309" width="683" height="486" key="find.popup" timestamp="1603652348001">
       <screen x="36" y="23" width="1404" height="877" />
     </state>
@@ -222,5 +242,20 @@
       <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="444" y="75" key="refactoring.ChangeSignatureDialog/36.23.1404.877@36.23.1404.877" timestamp="1603627681949" />
+    <state x="403" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1603670544492">
+      <screen x="36" y="23" width="1404" height="877" />
+    </state>
+    <state x="403" y="213" width="670" height="676" key="search.everywhere.popup/36.23.1404.877@36.23.1404.877" timestamp="1603670544492" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

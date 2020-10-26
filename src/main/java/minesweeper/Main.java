@@ -1,19 +1,20 @@
 package minesweeper;
 import com.google.gson.Gson;
 import minesweeper.controller.MinesweeperController;
+import net.spy.memcached.MemcachedClient;
 import org.slf4j.MDC;
 import spark.Spark;
 
 import java.awt.*;
+import java.io.IOException;
+import java.net.InetSocketAddress;
 
 import static spark.Spark.*;
 
 public class Main {
     private static final MinesweeperController minesweeperController = MinesweeperController.INSTANCE;
 
-    public static void main(String[] args) {
-        System.out.println("Application running at http://localhost:4567/ping");
-
+    public static void main(String[] args) throws IOException {
         get("/ping", (req, res) -> "pong");
 
         Gson gson = new Gson();

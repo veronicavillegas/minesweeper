@@ -2,6 +2,7 @@ package minesweeper.service;
 
 import minesweeper.domain.Square;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public enum CalculatorMinesService {
@@ -38,7 +39,9 @@ public enum CalculatorMinesService {
         calculateAdyacents(boardWithMines, randomRow, randomColumn);
     }
 
-    private void calculateAdyacents(Square[][] boardWithMines, int mineRow, int mineColumn) {
+    private ArrayList<Square> calculateAdyacents(Square[][] boardWithMines, int mineRow, int mineColumn) {
+        ArrayList<Square> adjacents = new ArrayList<>();
+
         for(int row = mineRow -1; row < mineRow + 2; row++) {
             if(isIndexOutOfLimit(boardWithMines.length, row)) {
                 continue;
@@ -47,6 +50,7 @@ public enum CalculatorMinesService {
                 if(isIndexOutOfLimit(boardWithMines[0].length, col)) {
                     continue;
                 }
+                adjacents.add(boardWithMines[row][col]);
 
                 int adyacentCell = boardWithMines[row][col].value;
 
@@ -55,6 +59,7 @@ public enum CalculatorMinesService {
                 }
             }
         }
+        return adjacents;
     }
 
     private boolean hasMine(int cell) {
@@ -63,5 +68,15 @@ public enum CalculatorMinesService {
 
     private boolean isIndexOutOfLimit(int length, int index) {
         return index + 1 > length  || index < 0;
+    }
+
+    private void discoverAdjacentCells(Square[][] playingBoard, int row, int column) {
+        ArrayList<Square> adjacents = calculateAdyacents(playingBoard, row, column);
+        for(Square square : adjacents) {
+            if(square.value == 0) {
+                discoverAdjacentCells(playingBoard, a);
+            }
+        }
+
     }
 }

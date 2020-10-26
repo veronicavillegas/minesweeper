@@ -1,6 +1,8 @@
+minesweeper/service/PersistenceService.class
 minesweeper/domain/Square.class
 minesweeper/domain/PlayData.class
 minesweeper/service/PlayingBoardService.class
+minesweeper/service/GameSaverService.class
 minesweeper/utils/PlayStatus.class
 minesweeper/domain/InititalizationData.class
 minesweeper/utils/CellStatus.class

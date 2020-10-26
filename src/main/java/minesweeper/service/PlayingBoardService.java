@@ -7,14 +7,19 @@ import minesweeper.domain.Square;
 import minesweeper.utils.CellStatus;
 import minesweeper.utils.PlayStatus;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 public enum PlayingBoardService {
     INSTANCE;
     CalculatorMinesService calculatorMinesService = CalculatorMinesService.INSTANCE;
+    PersistenceService persistenceService = PersistenceService.INSTANCE;
 
     /*
     * Initilize the play board.
     * */
-    public PlayingBoard createPlayBoard(InititalizationData inititalizationData) {
+    public PlayingBoard createPlayBoard(InititalizationData inititalizationData) throws IOException {
         int rows = inititalizationData.rows;
         int columns = inititalizationData.columns;
         int mines = inititalizationData.mines;
@@ -23,11 +28,29 @@ public enum PlayingBoardService {
         playingBoard.board = initBoard(rows, columns);
         playingBoard.board = calculatorMinesService.setMines(playingBoard.board, mines);
         playingBoard.playStatus = PlayStatus.INIT;
+        playingBoard.id = getPlayingBoardId(inititalizationData.user);
+
+        saveGame(inititalizationData.user, playingBoard);
 
         return playingBoard;
     }
 
+    private String getPlayingBoardId(String user) {
+        String actualDateTime = LocalDateTime.now().toString();
+        return user+actualDateTime;
+    }
+
+    private void saveGame(String user, PlayingBoard playingBoard) throws IOException {
+        ArrayList<String> gamesIds = new ArrayList<>();
+        gamesIds.add(playingBoard.id);
+
+        persistenceService.save(user, gamesIds);
+        persistenceService.save(playingBoard.id, playingBoard);
+    }
+
     public PlayingBoard discoverCell(PlayingBoard playingBoard, Cell selectedCell) {
+        //TODO: Get playingBoard form MCC
+
         Square[][] board = playingBoard.board;
         int selectedRow = selectedCell.row;
         int selectedColumn = selectedCell.column;
@@ -43,7 +66,6 @@ public enum PlayingBoardService {
             revealAllMinesInDisplayBoard(playingBoard);
             return playingBoard;
         } else {
-            //Mostrar en el display board las adyacentes con 0.
             playingBoard.playStatus = PlayStatus.CONTINUE;
             updateDisplay(playingBoard, selectedCell);
         }
@@ -56,7 +78,7 @@ public enum PlayingBoardService {
 
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[0].length; col++) {
-                if((board[row][col].display == CellStatus.BLANK.toString() || board[row][col].display == CellStatus.MARKED.toString())
+                if((board[row][col].display == CellStatus.BLANK || board[row][col].display == CellStatus.MARKED)
                         && board[row][col].value != 9) {
                     allCellsWereDiscovered = false;
                     break;
@@ -67,11 +89,30 @@ public enum PlayingBoardService {
     }
 
     private void setCellAsDiscovered(Square[][] board, int selectedRow, int selectedColumn) {
-        board[selectedRow][selectedColumn].display = CellStatus.DISCOVERED.toString();
+        board[selectedRow][selectedColumn].display = CellStatus.DISCOVERED;
     }
 
     private void updateDisplay(PlayingBoard playingBoard, Cell selectedCell) {
+        playingBoard.playStatus = PlayStatus.CONTINUE;
 
+        if (isSelectedCellAdjacentToMine(playingBoard.board, selectedCell.row, selectedCell.column)) {
+            setCellAsDiscovered(playingBoard, selectedCell);
+            return;
+        }
+        calculatorMinesService.discoverAdjacentCells(playingBoard.board, selectedCell.row, selectedCell.column);
+    }
+
+    private void setCellAsDiscovered(PlayingBoard playingBoard, Cell selectedCell) {
+        playingBoard.board[selectedCell.row][selectedCell.column].display = CellStatus.DISCOVERED;
+    }
+
+    private boolean isSelectedCellAdjacentToMine(Square[][] playingBoard, int row, int column) {
+        int selectedSquareValue = playingBoard[row][column].value;
+
+        if(selectedSquareValue == 0) {
+            return false;
+        }
+        return true;
     }
 
     private Square[][] initBoard(int rows, int columns) {
@@ -79,7 +120,7 @@ public enum PlayingBoardService {
         for (int r = 0; r < rows; r++) {
             for (int col = 0; col < columns; col++) {
                 board[r][col] = new Square();
-                board[r][col].display = CellStatus.BLANK.toString();
+                board[r][col].display = CellStatus.BLANK;
                 board[r][col].value = 0;
             }
         }
@@ -92,7 +133,7 @@ public enum PlayingBoardService {
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[0].length; col++) {
                 if(cellHasMine(board[row][col].value)) {
-                    board[row][col].display = CellStatus.MINE.toString();
+                    board[row][col].display = CellStatus.MINE;
                 }
             }
         }
