@@ -1,6 +1,7 @@
 package minesweeper.service;
 
 import minesweeper.domain.Square;
+import minesweeper.utils.CellStatus;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -36,27 +37,38 @@ public enum CalculatorMinesService {
 
         boardWithMines[randomRow][randomColumn].value = 9;
 
-        calculateAdyacents(boardWithMines, randomRow, randomColumn);
+        calculateAdjacents(boardWithMines, randomRow, randomColumn);
     }
 
-    private ArrayList<Square> calculateAdyacents(Square[][] boardWithMines, int mineRow, int mineColumn) {
+    private void calculateAdjacents(Square[][] boardWithMines, int randomRow, int randomColumn) {
+        ArrayList<Square> adjacents = getAdjacents(boardWithMines, randomRow, randomColumn);
+
+        for(Square square : adjacents) {
+            if(!hasMine(square.value)){
+                boardWithMines[square.row][square.column].value++;
+            }
+        }
+    }
+
+
+    private ArrayList<Square> getAdjacents(Square[][] boardWithMines, int centralRow, int centralColumn) {
         ArrayList<Square> adjacents = new ArrayList<>();
 
-        for(int row = mineRow -1; row < mineRow + 2; row++) {
+        for(int row = centralRow -1; row < centralRow + 2; row++) {
             if(isIndexOutOfLimit(boardWithMines.length, row)) {
                 continue;
             }
-            for (int col = mineColumn -1; col < mineColumn + 2; col++) {
+            for (int col = centralColumn -1; col < centralColumn + 2; col++) {
                 if(isIndexOutOfLimit(boardWithMines[0].length, col)) {
                     continue;
                 }
-                adjacents.add(boardWithMines[row][col]);
 
-                int adyacentCell = boardWithMines[row][col].value;
+                boolean adjacentIsCentralSquare = centralColumn == col && centralRow == row;
 
-                if(!hasMine(adyacentCell)){
-                    boardWithMines[row][col].value = ++adyacentCell;
+                if(adjacentIsCentralSquare){
+                    continue;
                 }
+                adjacents.add(boardWithMines[row][col]);
             }
         }
         return adjacents;
@@ -70,13 +82,13 @@ public enum CalculatorMinesService {
         return index + 1 > length  || index < 0;
     }
 
-    private void discoverAdjacentCells(Square[][] playingBoard, int row, int column) {
-        ArrayList<Square> adjacents = calculateAdyacents(playingBoard, row, column);
+    public void discoverAdjacentCells(Square[][] playingBoard, int row, int column) {
+        ArrayList<Square> adjacents = getAdjacents(playingBoard, row, column);
         for(Square square : adjacents) {
-            if(square.value == 0) {
-                discoverAdjacentCells(playingBoard, a);
+            if(square.value == 0 && square.display==CellStatus.BLANK) {
+                square.display = CellStatus.DISCOVERED;
+                discoverAdjacentCells(playingBoard, square.row, square.column);
             }
         }
-
     }
 }

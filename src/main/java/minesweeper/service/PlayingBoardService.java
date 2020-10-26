@@ -122,6 +122,8 @@ public enum PlayingBoardService {
                 board[r][col] = new Square();
                 board[r][col].display = CellStatus.BLANK;
                 board[r][col].value = 0;
+                board[r][col].row = r;
+                board[r][col].column = col;
             }
         }
         return board;
