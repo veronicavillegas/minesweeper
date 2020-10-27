@@ -1,1 +1,2 @@
-web: java -jar target/minesweeper-1.0-SNAPSHOT.jar
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* minesweeper.Main
+
