@@ -1,30 +1,38 @@
 package minesweeper.service;
 
-import net.spy.memcached.MemcachedClient;
+import minesweeper.domain.PlayingBoard;
 
 import java.io.IOException;
-import java.net.InetSocketAddress;
+import java.util.ArrayList;
 
-public enum  PersistenceService {
+public enum PersistenceService {
     INSTANCE;
-    public final int EXPIRATION_TIME = 900;
-    public final String HOST = "127.0.0.1";
-    public final int PORT = 11211;
 
-    public void save(String key, Object object) throws IOException {
-        getConnection().set(key, EXPIRATION_TIME, object);
+    MemcachedService memcachedService = MemcachedService.INSTANCE;
+
+    public PlayingBoard getGame(String user, String idBoard) throws IOException {
+        ArrayList<String> gamesIds = (ArrayList<String>) memcachedService.get(user);
+        for(String gameId : gamesIds){
+            if(gameId.equals(idBoard)) {
+                return (PlayingBoard)memcachedService.get(gameId);
+            }
+        }
+        return null;
     }
 
-    public Object get(String key) throws IOException {
-        return getConnection().get(key);
+    public void saveGame(String user, PlayingBoard playingBoard) throws IOException {
+        ArrayList<String> gamesIds = (ArrayList<String>)memcachedService.get(user);
+
+        if(gamesIds == null) {
+            gamesIds = new ArrayList<>();
+        }
+        gamesIds.add(playingBoard.id);
+
+        memcachedService.save(user, gamesIds);
+        memcachedService.save(playingBoard.id, playingBoard);
     }
 
-    public  void update(String key, Object object) throws IOException {
-        getConnection().replace(key, EXPIRATION_TIME, object);
-    }
-
-    private MemcachedClient getConnection () throws IOException {
-        MemcachedClient mcc = new MemcachedClient(new InetSocketAddress(HOST, PORT));
-        return mcc;
+    public void updateGame(String boardId, PlayingBoard playingBoard) throws IOException {
+        memcachedService.update(boardId, playingBoard);
     }
 }

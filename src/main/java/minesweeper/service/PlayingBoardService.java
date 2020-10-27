@@ -1,19 +1,15 @@
 package minesweeper.service;
 
-import minesweeper.domain.Cell;
-import minesweeper.domain.InititalizationData;
-import minesweeper.domain.PlayingBoard;
-import minesweeper.domain.Square;
+import minesweeper.domain.*;
 import minesweeper.utils.CellStatus;
 import minesweeper.utils.PlayStatus;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public enum PlayingBoardService {
     INSTANCE;
-    CalculatorMinesService calculatorMinesService = CalculatorMinesService.INSTANCE;
+    CalculatorService calculatorService = CalculatorService.INSTANCE;
     PersistenceService persistenceService = PersistenceService.INSTANCE;
 
     /*
@@ -26,30 +22,19 @@ public enum PlayingBoardService {
 
         PlayingBoard playingBoard = new PlayingBoard();
         playingBoard.board = initBoard(rows, columns);
-        playingBoard.board = calculatorMinesService.setMines(playingBoard.board, mines);
+        playingBoard.board = calculatorService.setMines(playingBoard.board, mines);
         playingBoard.playStatus = PlayStatus.INIT;
         playingBoard.id = getPlayingBoardId(inititalizationData.user);
 
-        saveGame(inititalizationData.user, playingBoard);
+        persistenceService.saveGame(inititalizationData.user, playingBoard);
 
         return playingBoard;
     }
 
-    private String getPlayingBoardId(String user) {
-        String actualDateTime = LocalDateTime.now().toString();
-        return user+actualDateTime;
-    }
-
-    private void saveGame(String user, PlayingBoard playingBoard) throws IOException {
-        ArrayList<String> gamesIds = new ArrayList<>();
-        gamesIds.add(playingBoard.id);
-
-        persistenceService.save(user, gamesIds);
-        persistenceService.save(playingBoard.id, playingBoard);
-    }
-
-    public PlayingBoard discoverCell(PlayingBoard playingBoard, Cell selectedCell) {
+    public PlayingBoard discoverCell(PlayData playData) throws IOException {
         //TODO: Get playingBoard form MCC
+        PlayingBoard playingBoard = getGame(playData);
+        Cell selectedCell = playData.selectedCell;
 
         Square[][] board = playingBoard.board;
         int selectedRow = selectedCell.row;
@@ -69,7 +54,22 @@ public enum PlayingBoardService {
             playingBoard.playStatus = PlayStatus.CONTINUE;
             updateDisplay(playingBoard, selectedCell);
         }
+        updateGame(playData.boardId, playingBoard);
         return playingBoard;
+    }
+
+    private void updateGame(String boardId, PlayingBoard playingBoard) throws IOException {
+        persistenceService.updateGame(boardId, playingBoard);
+    }
+
+    public PlayingBoard getGame(PlayData playData) throws IOException {
+        return persistenceService.getGame(playData.user, playData.boardId);
+    }
+
+
+    private String getPlayingBoardId(String user) {
+        String actualDateTime = LocalDateTime.now().toString();
+        return user+actualDateTime;
     }
 
     private boolean allCellsWereDiscovered(PlayingBoard playingBoard) {
@@ -99,7 +99,7 @@ public enum PlayingBoardService {
             setCellAsDiscovered(playingBoard, selectedCell);
             return;
         }
-        calculatorMinesService.discoverAdjacentCells(playingBoard.board, selectedCell.row, selectedCell.column);
+        calculatorService.discoverAdjacentCells(playingBoard.board, selectedCell.row, selectedCell.column);
     }
 
     private void setCellAsDiscovered(PlayingBoard playingBoard, Cell selectedCell) {

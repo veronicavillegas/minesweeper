@@ -28,12 +28,16 @@ public enum MinesweeperController {
         return playingBoardResponse;
     }
 
-    public PlayingBoardResponse discoverCell(final Request request, final Response response) {
+    public PlayingBoardResponse playGame(final Request request, final Response response) {
         PlayingBoardResponse playingBoardResponse = new PlayingBoardResponse();
 
         try{
             PlayData playData = new Gson().fromJson(request.body(), PlayData.class);
-            playingBoardResponse.playingBoard = playingBoardService.discoverCell(playData.playingBoard, playData.selectedCell);
+            if(playData.selectedCell == null) {
+                playingBoardResponse.playingBoard = playingBoardService.getGame(playData);
+            } else {
+                playingBoardResponse.playingBoard = playingBoardService.discoverCell(playData);
+            }
             playingBoardResponse.statusResponse = getStatusResponse(201, "OK");
         } catch (Exception ex) {
             playingBoardResponse.statusResponse = getStatusResponse(500, ex.getMessage());
@@ -42,13 +46,6 @@ public enum MinesweeperController {
         return playingBoardResponse;
     }
 
-    public StatusResponse saveGame(final Request request, final Response response) {
-        return new StatusResponse();
-    }
-
-    public PlayingBoardResponse resumeGame(final Request request, final Response response) {
-        return new PlayingBoardResponse();
-    }
 
     private StatusResponse getStatusResponse(int status, String message) {
         StatusResponse statusResponse = new StatusResponse();

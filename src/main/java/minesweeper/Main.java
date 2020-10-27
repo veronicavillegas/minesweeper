@@ -1,13 +1,8 @@
 package minesweeper;
 import com.google.gson.Gson;
 import minesweeper.controller.MinesweeperController;
-import net.spy.memcached.MemcachedClient;
-import org.slf4j.MDC;
-import spark.Spark;
 
-import java.awt.*;
 import java.io.IOException;
-import java.net.InetSocketAddress;
 
 import static spark.Spark.*;
 
@@ -21,11 +16,7 @@ public class Main {
 
         post("/create_playing_board", minesweeperController::createPlayBoard, gson::toJson);
 
-        post("/play", minesweeperController::discoverCell, gson::toJson);
-
-        post("/save_game", minesweeperController::saveGame, gson::toJson);
-
-        post("/resume_game", minesweeperController::resumeGame, gson::toJson);
+        post("/play", minesweeperController::playGame, gson::toJson);
 
         after((request, response) -> {
             response.header("Content-Type", "application/json");

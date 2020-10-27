@@ -6,7 +6,7 @@ import minesweeper.utils.CellStatus;
 import java.util.ArrayList;
 import java.util.Random;
 
-public enum CalculatorMinesService {
+public enum CalculatorService {
     INSTANCE;
 
     /*
