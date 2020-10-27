@@ -5,6 +5,6 @@ import minesweeper.domain.PlayingBoard;
 
 public class PlayData {
     public Cell selectedCell;
-    public String user;
-    public String boardId;
+    public String id;
+    public String action;
 }

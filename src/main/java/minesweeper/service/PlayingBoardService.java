@@ -33,12 +33,14 @@ public enum PlayingBoardService {
 
     public PlayingBoard discoverCell(PlayData playData) throws IOException {
         //TODO: Get playingBoard form MCC
-        PlayingBoard playingBoard = getGame(playData);
+        PlayingBoard playingBoard = getGame(playData.id);
         Cell selectedCell = playData.selectedCell;
 
         Square[][] board = playingBoard.board;
         int selectedRow = selectedCell.row;
         int selectedColumn = selectedCell.column;
+
+        setCellAsDiscovered(playingBoard, selectedCell);
 
         if(cellHasMine(board[selectedRow][selectedColumn].value)) {
             playingBoard.playStatus = PlayStatus.GAME_OVER;
@@ -54,7 +56,7 @@ public enum PlayingBoardService {
             playingBoard.playStatus = PlayStatus.CONTINUE;
             updateDisplay(playingBoard, selectedCell);
         }
-        updateGame(playData.boardId, playingBoard);
+        updateGame(playData.id, playingBoard);
         return playingBoard;
     }
 
@@ -62,8 +64,8 @@ public enum PlayingBoardService {
         persistenceService.updateGame(boardId, playingBoard);
     }
 
-    public PlayingBoard getGame(PlayData playData) throws IOException {
-        return persistenceService.getGame(playData.user, playData.boardId);
+    public PlayingBoard getGame(String id) throws IOException {
+        return persistenceService.getGame(id);
     }
 
 
@@ -96,7 +98,6 @@ public enum PlayingBoardService {
         playingBoard.playStatus = PlayStatus.CONTINUE;
 
         if (isSelectedCellAdjacentToMine(playingBoard.board, selectedCell.row, selectedCell.column)) {
-            setCellAsDiscovered(playingBoard, selectedCell);
             return;
         }
         calculatorService.discoverAdjacentCells(playingBoard.board, selectedCell.row, selectedCell.column);
@@ -136,6 +137,9 @@ public enum PlayingBoardService {
             for (int col = 0; col < board[0].length; col++) {
                 if(cellHasMine(board[row][col].value)) {
                     board[row][col].display = CellStatus.MINE;
+                }
+                else {
+                    board[row][col].display = CellStatus.DISCOVERED;
                 }
             }
         }

@@ -34,13 +34,13 @@ public enum MinesweeperController {
         try{
             PlayData playData = new Gson().fromJson(request.body(), PlayData.class);
             if(playData.selectedCell == null) {
-                playingBoardResponse.playingBoard = playingBoardService.getGame(playData);
+                playingBoardResponse.playingBoard = playingBoardService.getGame(playData.id);
             } else {
                 playingBoardResponse.playingBoard = playingBoardService.discoverCell(playData);
             }
             playingBoardResponse.statusResponse = getStatusResponse(201, "OK");
         } catch (Exception ex) {
-            playingBoardResponse.statusResponse = getStatusResponse(500, ex.getMessage());
+            playingBoardResponse.statusResponse = getStatusResponse(500, "We have a problem at this moment...");
         }
 
         return playingBoardResponse;

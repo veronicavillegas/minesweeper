@@ -10,12 +10,18 @@ public enum PersistenceService {
 
     MemcachedService memcachedService = MemcachedService.INSTANCE;
 
-    public PlayingBoard getGame(String user, String idBoard) throws IOException {
+    public PlayingBoard getGame(String idBoard) throws IOException {
+        return (PlayingBoard)memcachedService.get(idBoard);
+    }
+
+    public ArrayList<PlayingBoard> getGamesOfUser (String user) throws IOException {
         ArrayList<String> gamesIds = (ArrayList<String>) memcachedService.get(user);
-        for(String gameId : gamesIds){
-            if(gameId.equals(idBoard)) {
-                return (PlayingBoard)memcachedService.get(gameId);
-            }
+        ArrayList<PlayingBoard> playingBoards = new ArrayList<>();
+
+        for (String gameId : gamesIds) {
+            PlayingBoard playingBoard = (PlayingBoard) memcachedService.get(gameId);
+            playingBoards.add(playingBoard);
+            return playingBoards;
         }
         return null;
     }
