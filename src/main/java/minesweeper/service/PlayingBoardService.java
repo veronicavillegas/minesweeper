@@ -60,6 +60,34 @@ public enum PlayingBoardService {
         return playingBoard;
     }
 
+
+    public PlayingBoard playGame(PlayData playData) throws IOException {
+        PlayingBoard playingBoard = new PlayingBoard();
+
+        if(playData.selectedCell == null) {
+            playingBoard = getGame(playData.id);
+        }
+        if (playData.action.equals("mark")) {
+            playingBoard = markCell(playData);
+        }
+        else {
+            playingBoard = discoverCell(playData);
+        }
+        return playingBoard;
+    }
+
+    private PlayingBoard markCell(PlayData playData) throws IOException {
+        PlayingBoard playingBoard = getGame(playData.id);
+
+        Cell selectedCell = playData.selectedCell;
+
+        playingBoard.board[selectedCell.row][selectedCell.column].display = CellStatus.MARKED;
+
+        updateGame(playingBoard.id, playingBoard);
+
+        return playingBoard;
+    }
+
     private void updateGame(String boardId, PlayingBoard playingBoard) throws IOException {
         persistenceService.updateGame(boardId, playingBoard);
     }
@@ -148,5 +176,6 @@ public enum PlayingBoardService {
     private boolean cellHasMine(int cell) {
         return cell == 9;
     }
+
 }
 

@@ -1,7 +1,8 @@
 # MINESWEEPER
 ## Getting Started
 
-The objective is to use Heroku as a server but at this moment I have problems to set it. 
+The objective is to use Heroku as a server but at this moment I have problems between memcached and heroku.
+ 
 The way to init the project is cloning the repo and then:
 
 ```
@@ -150,9 +151,10 @@ Response:
 
 
 #### Playing
-You should use the id obtained in the previous step and set row and column you want to discover. Also you should
-indicate if you want discover or only mark the cell. 
-Property "playStatus" will show you the actual state of your game: INIT, CONTINUE, GAME_OVER
+* You should use the id obtained in the previous step and set row and column you want to discover. 
+* You should indicate if you want to discover or only mark the cell. If you don't say anything, I will assume you want to discover the cell.
+* Property "playStatus" will show you the actual state of your game: INIT, CONTINUE, GAME_OVER
+* The application will understand that if you don't send 'selectedCell' you want to resume an old game indicated by id "id".
 
 > [POST] /play
 
@@ -292,6 +294,7 @@ It will keep your game for 24 hours.
 * I recognize this project needs improvements for example:
     * Unit tests: I consider it is an important point but in this case It was easy for me to test the little flows each time. 
     * I would like to offer you the list of games so you can select anyone you want.
+    * Traking time of the game.
 ## Questions
 
 [veronicayvill@gmail.com](veronicayvill@gmail.com)
