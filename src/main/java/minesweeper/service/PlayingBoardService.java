@@ -116,7 +116,7 @@ public enum PlayingBoardService {
         return true;
     }
 
-    private Square[][] initBoard(int rows, int columns) {
+    private Square[][] initBoard(int rows, int columns) { 
         Square[][] board = new Square[rows][columns];
         for (int r = 0; r < rows; r++) {
             for (int col = 0; col < columns; col++) {
