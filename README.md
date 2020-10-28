@@ -1,6 +1,13 @@
 # MINESWEEPER
 ## Getting Started
 
+The objective is to use Heroku as a server but at this moment I have problems to set it. 
+The way to init the project is cloning the repo and then:
+
+```
+mvn clean install
+mvn exec:java
+```
 Application starts listen on http://localhost:4567.
 
 ## Usage

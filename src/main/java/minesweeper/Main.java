@@ -10,6 +10,8 @@ public class Main {
     private static final MinesweeperController minesweeperController = MinesweeperController.INSTANCE;
 
     public static void main(String[] args) throws IOException {
+        port(getHerokuAssignedPort());
+
         get("/ping", (req, res) -> "pong");
 
         Gson gson = new Gson();
