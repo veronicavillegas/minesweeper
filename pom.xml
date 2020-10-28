@@ -52,7 +52,7 @@
                 <version>0.4.4</version>
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
-                    <appName>minesweeper</appName>
+                    <appName>minesweeper20201027</appName>
                     <processTypes>
                         <!-- Tell Heroku how to launch your application -->
                         <web>java -jar ./target/minesweeper-1.0-SNAPSHOT-jar-with-dependencies.jar</web>
