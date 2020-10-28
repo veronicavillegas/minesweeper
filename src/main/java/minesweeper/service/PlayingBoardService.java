@@ -121,10 +121,10 @@ public enum PlayingBoardService {
         for (int r = 0; r < rows; r++) {
             for (int col = 0; col < columns; col++) {
                 board[r][col] = new Square();
-                board[r][col].display = CellStatus.BLANK;
                 board[r][col].value = 0;
                 board[r][col].row = r;
                 board[r][col].column = col;
+                board[r][col].display = CellStatus.BLANK;
             }
         }
         return board;
