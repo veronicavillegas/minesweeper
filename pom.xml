@@ -55,7 +55,8 @@
                     <appName>minesweeper20201027</appName>
                     <processTypes>
                         <!-- Tell Heroku how to launch your application -->
-                        <web>java -jar ./target/minesweeper-1.0-SNAPSHOT-jar-with-dependencies.jar</web>
+                        <!-- You might have to remove the ./ in front   -->
+                        <web>java -jar target/minesweeper-1.0-SNAPSHOT-jar-with-dependencies.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
