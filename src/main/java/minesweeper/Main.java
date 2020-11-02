@@ -20,6 +20,8 @@ public class Main {
 
         post("/play", minesweeperController::playGame, gson::toJson);
 
+        post("/save_memcached_heroku", minesweeperController::saveMemcachedHeroku, gson::toJson);
+
         after((request, response) -> {
             response.header("Content-Type", "application/json");
         });
