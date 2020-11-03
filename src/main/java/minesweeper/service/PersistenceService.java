@@ -1,44 +1,43 @@
 package minesweeper.service;
 
+import minesweeper.client.MemcachedMinesweeperClient;
 import minesweeper.domain.PlayingBoard;
-
-import java.io.IOException;
 import java.util.ArrayList;
 
 public enum PersistenceService {
     INSTANCE;
 
-    MemcachedService memcachedService = MemcachedService.INSTANCE;
+    MemcachedMinesweeperClient memcachedMinesweeperClient = MemcachedMinesweeperClient.INSTANCE;
 
-    public PlayingBoard getGame(String idBoard) throws IOException {
-        return (PlayingBoard)memcachedService.get(idBoard);
+    public PlayingBoard getGame(String idBoard) {
+        return (PlayingBoard)memcachedMinesweeperClient.get(idBoard);
     }
 
-    public ArrayList<PlayingBoard> getGamesOfUser (String user) throws IOException {
-        ArrayList<String> gamesIds = (ArrayList<String>) memcachedService.get(user);
+    public ArrayList<PlayingBoard> getGamesOfUser (String user) {
+        ArrayList<String> gamesIds = (ArrayList<String>) memcachedMinesweeperClient.get(user);
         ArrayList<PlayingBoard> playingBoards = new ArrayList<>();
 
         for (String gameId : gamesIds) {
-            PlayingBoard playingBoard = (PlayingBoard) memcachedService.get(gameId);
+            PlayingBoard playingBoard = (PlayingBoard) memcachedMinesweeperClient.get(gameId);
             playingBoards.add(playingBoard);
             return playingBoards;
         }
         return null;
     }
 
-    public void saveGame(String user, PlayingBoard playingBoard) throws IOException {
-        ArrayList<String> gamesIds = (ArrayList<String>)memcachedService.get(user);
+    public void saveGame(String user, PlayingBoard playingBoard){
+        ArrayList<String> gamesIds = (ArrayList<String>)memcachedMinesweeperClient.get(user);
 
         if(gamesIds == null) {
             gamesIds = new ArrayList<>();
         }
         gamesIds.add(playingBoard.id);
 
-        memcachedService.save(user, gamesIds);
-        memcachedService.save(playingBoard.id, playingBoard);
+        memcachedMinesweeperClient.save(user, gamesIds);
+        memcachedMinesweeperClient.save(playingBoard.id, playingBoard);
     }
 
-    public void updateGame(String boardId, PlayingBoard playingBoard) throws IOException {
-        memcachedService.update(boardId, playingBoard);
+    public void updateGame(String boardId, PlayingBoard playingBoard) {
+        memcachedMinesweeperClient.update(boardId, playingBoard);
     }
 }

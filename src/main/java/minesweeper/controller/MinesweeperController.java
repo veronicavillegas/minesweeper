@@ -5,7 +5,6 @@ import minesweeper.domain.PlayData;
 import minesweeper.domain.InititalizationData;
 import minesweeper.response.StatusResponse;
 import minesweeper.response.PlayingBoardResponse;
-import minesweeper.service.MemcachedHerokuService;
 import minesweeper.service.PlayingBoardService;
 import spark.Request;
 import spark.Response;
@@ -43,15 +42,6 @@ public enum MinesweeperController {
         }
 
         return playingBoardResponse;
-    }
-
-    public boolean saveMemcachedHeroku(final Request request, final Response response) {
-        try{
-            new MemcachedHerokuService().save();
-        } catch (Exception ex){
-            return false;
-        }
-       return true;
     }
 
     private StatusResponse getStatusResponse(int status, String message) {
