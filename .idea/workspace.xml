@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="241759ae-6628-4176-aca0-21d22567497e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/interfaces/PlayingBoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/client/MemcachedMinesweeperClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/client/MemcachedMinesweeperClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/controller/MinesweeperController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/CalculatorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/PersistenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/minesweeper/service/PlayingBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/minesweeper/service/MinesweeperService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/controller/MinesweeperController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/domain/PlayData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/minesweeper/domain/PlayData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/service/CalculatorMinesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/minesweeper/service/PlayingBoardService.class" beforeDir="false" />
-    </list>
+    <list default="true" id="241759ae-6628-4176-aca0-21d22567497e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +173,7 @@
       <workItem from="1610451184437" duration="2000" />
       <workItem from="1610451213623" duration="3321000" />
       <workItem from="1611150623770" duration="465000" />
-      <workItem from="1611151105283" duration="3804000" />
+      <workItem from="1611151105283" duration="3993000" />
     </task>
     <servers />
   </component>
