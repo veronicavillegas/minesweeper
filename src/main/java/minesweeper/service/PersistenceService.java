@@ -4,10 +4,18 @@ import minesweeper.client.MemcachedMinesweeperClient;
 import minesweeper.domain.PlayingBoard;
 import java.util.ArrayList;
 
-public enum PersistenceService {
-    INSTANCE;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-    MemcachedMinesweeperClient memcachedMinesweeperClient = MemcachedMinesweeperClient.INSTANCE;
+@Service
+public class PersistenceService {
+
+    MemcachedMinesweeperClient memcachedMinesweeperClient;
+
+    @Autowired
+    public PersistenceService(MemcachedMinesweeperClient memcachedMinesweeperClient) {
+        this.memcachedMinesweeperClient = memcachedMinesweeperClient;
+    }
 
     public PlayingBoard getGame(String idBoard) {
         return (PlayingBoard)memcachedMinesweeperClient.get(idBoard);

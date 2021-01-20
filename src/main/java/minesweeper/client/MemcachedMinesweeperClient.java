@@ -6,14 +6,16 @@ import net.rubyeye.xmemcached.auth.AuthInfo;
 import net.rubyeye.xmemcached.command.BinaryCommandFactory;
 import net.rubyeye.xmemcached.exception.MemcachedException;
 import net.rubyeye.xmemcached.utils.AddrUtil;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
-public enum MemcachedMinesweeperClient {
-    INSTANCE;
+@Component
+public class MemcachedMinesweeperClient {
+
     private final int PERSISTENCE_PERIOD = 86400; //24HS.
 
     public net.rubyeye.xmemcached.MemcachedClient getClient() {

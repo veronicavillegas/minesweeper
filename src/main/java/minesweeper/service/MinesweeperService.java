@@ -1,20 +1,30 @@
 package minesweeper.service;
 
 import minesweeper.domain.*;
+import minesweeper.service.interfaces.PlayingBoardService;
 import minesweeper.utils.CellStatus;
 import minesweeper.utils.PlayStatus;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-public enum PlayingBoardService {
-    INSTANCE;
-    CalculatorService calculatorService = CalculatorService.INSTANCE;
-    PersistenceService persistenceService = PersistenceService.INSTANCE;
+@Service
+public class MinesweeperService implements PlayingBoardService {
+    CalculatorService calculatorService;
+    PersistenceService persistenceService;
+
+    @Autowired
+    public MinesweeperService(CalculatorService calculatorService, PersistenceService persistenceService){
+        this.calculatorService = calculatorService;
+        this.persistenceService = persistenceService;
+    }
 
     /*
     * Initilize the play board.
     * */
+    @Override
     public PlayingBoard createPlayBoard(InititalizationData inititalizationData) throws IOException {
         int rows = inititalizationData.rows;
         int columns = inititalizationData.columns;
@@ -61,6 +71,7 @@ public enum PlayingBoardService {
     }
 
 
+    @Override
     public PlayingBoard playGame(PlayData playData) throws IOException {
         PlayingBoard playingBoard = new PlayingBoard();
 
@@ -92,6 +103,7 @@ public enum PlayingBoardService {
         persistenceService.updateGame(boardId, playingBoard);
     }
 
+    @Override
     public PlayingBoard getGame(String id) throws IOException {
         return persistenceService.getGame(id);
     }

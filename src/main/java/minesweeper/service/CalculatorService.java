@@ -2,12 +2,12 @@ package minesweeper.service;
 
 import minesweeper.domain.Square;
 import minesweeper.utils.CellStatus;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public enum CalculatorService {
-    INSTANCE;
+public class CalculatorService {
 
     /*
     * Set mines into playboard

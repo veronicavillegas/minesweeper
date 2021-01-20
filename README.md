@@ -295,6 +295,15 @@ It will keep your game for 24 hours.
     * Unit tests: I consider it is an important point but in this case It was easy for me to test the little flows each time. 
     * I would like to offer you the list of games so you can select anyone you want.
     * Traking time of the game.
+## What libraries do I use in this project?
+This project has the necessary libraries for:
+*Manage urls with Spark
+*Manage json, to transform in object and viceversa with Gson.
+*Temporal persistence using Spy
+*Manage logs using slf4j.
+*Unit testing using junit
+*Mocks --> mockito -- Todo 
+*Persistence --> NH4Hibernate -- Todo
 ## Questions
 
 [veronicayvill@gmail.com](veronicayvill@gmail.com)

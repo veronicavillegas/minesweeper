@@ -7,7 +7,7 @@ import java.io.IOException;
 import static spark.Spark.*;
 
 public class Main {
-    private static final MinesweeperController minesweeperController = MinesweeperController.INSTANCE;
+    private static final MinesweeperController minesweeperController;
 
     public static void main(String[] args) throws IOException {
         port(getHerokuAssignedPort());
@@ -28,13 +28,13 @@ public class Main {
     static int getHerokuAssignedPort() {
 
         ProcessBuilder processBuilder = new ProcessBuilder();
-        /*
+        
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
 
-         */
-        return Integer.parseInt(processBuilder.environment().get("PORT"));
+         
+        //return Integer.parseInt(processBuilder.environment().get("PORT"));
     }
 }

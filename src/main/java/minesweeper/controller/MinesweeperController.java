@@ -5,13 +5,20 @@ import minesweeper.domain.PlayData;
 import minesweeper.domain.InititalizationData;
 import minesweeper.response.StatusResponse;
 import minesweeper.response.PlayingBoardResponse;
-import minesweeper.service.PlayingBoardService;
+import minesweeper.service.MinesweeperService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import spark.Request;
 import spark.Response;
 
-public enum MinesweeperController {
-    INSTANCE;
-    PlayingBoardService playingBoardService = PlayingBoardService.INSTANCE;
+@Controller
+public class MinesweeperController {
+    MinesweeperService playingBoardService;
+
+    @Autowired
+    public MinesweeperController(MinesweeperService playingBoardService){
+        this.playingBoardService = playingBoardService;
+    }
 
     public PlayingBoardResponse createPlayBoard(final Request request, final Response response) {
         PlayingBoardResponse playingBoardResponse = new PlayingBoardResponse();
